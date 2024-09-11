@@ -1,0 +1,156 @@
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: rgb(207, 204, 168);
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 5s ease;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    padding: 0;
+}
+
+header.shrink {
+    height: 50px;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+
+header a {
+    display: block;
+    height: 100%;
+}
+
+header img {
+    width: 1000px;
+    transition: all 4s ease;
+    height: auto;
+    padding-top: 200px;
+}
+
+header.shrink img {
+    width: 150px;
+    height: auto;
+    padding-top: 0;
+}
+
+.hero-section {
+    background: url("images/hero-background.jpg") no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+    margin-top: 100px;
+    transition: margin-top 1s ease;
+}
+
+.hero-section.shrink {
+    margin-top: 50px;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin-bottom: 40px;
+}
+
+.hero-section .cta-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero-section .cta-button:hover {
+    background-color: #0056b3;
+}
+
+.content-section {
+    padding: 60px 20px;
+    text-align: center;
+    flex: 1;
+}
+
+.content-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.content-section p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #666;
+}
+
+.features-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 60px 20px;
+    background-color: #f8f8f8;
+}
+
+.feature-box {
+    flex: 1 1 30%;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+}
+
+.feature-box h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.feature-box p {
+    font-size: 1rem;
+    color: #666;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+footer p {
+    font-size: 1rem;
+    margin: 0;
+}
