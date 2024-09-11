@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>xZACTLY.AI</title>
+    <link rel="stylesheet" href="css/style.css" />
+
+  </head>
+  <body>
+    <header id="header">
+      <a href="#top">
+        <img src="images/logo1.png" alt="xZACTLY.AI Logo" />
+      </a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="top">
+      <br><br><br><br><br><br><br><br><br>
+
+      <h1>Revolutionizing AI for the Future</h1>
+      <p>
+        xZACTLY.AI is committed to building the next generation of AI solutions
+        that empower businesses to achieve more with the power of artificial
+        intelligence.
+      </p>
+      <a href="#learn-more" class="cta-button">Learn More</a>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section" id="learn-more">
+      <h2>What We Do</h2>
+      <p>
+        At xZACTLY.AI, we specialize in AI-driven solutions, providing
+        cutting-edge technology for businesses to optimize performance, enhance
+        decision-making, and streamline operations through automation.
+      </p>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+      <div class="feature-box">
+        <h3>AI Solutions</h3>
+        <p>
+          We offer a wide range of AI solutions tailored to different
+          industries, ensuring your business stays ahead in a competitive
+          landscape.
+        </p>
+      </div>
+      <div class="feature-box">
+        <h3>Innovative Technology</h3>
+        <p>
+          Our technology is at the forefront of innovation, allowing businesses
+          to adapt quickly and efficiently to ever-changing markets.
+        </p>
+      </div>
+      <div class="feature-box">
+        <h3>Expert Team</h3>
+        <p>
+          Our team consists of top-tier AI experts with extensive knowledge and
+          experience in developing high-impact AI products.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 xZACTLY.AI. All rights reserved.</p>
+    </footer>
+
+    <script>
+      let lastMouseY = 0;
+      let isShrunk = false;
+      const threshold = 200; // Minimum distance in pixels before shrinking
+
+      function shrinkHeader() {
+        const header = document.getElementById("header");
+        const heroSection = document.querySelector(".hero-section");
+
+        if (!isShrunk) {
+          header.classList.add("shrink");
+          heroSection.classList.add("shrink");
+          isShrunk = true;
+        }
+      }
+
+      window.onload = function () {
+        shrinkHeader();
+      };
+      window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+      };
+    </script>
+  </body>
+</html>
