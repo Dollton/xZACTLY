@@ -60,11 +60,13 @@ header.shrink img {
     text-align: center;
     padding: 0 20px;
     margin-top: 100px;
-    transition: margin-top 1s ease;
+    transition: margin-top 4s ease;
+    transition: height 4s ease;
 }
 
 .hero-section.shrink {
     margin-top: 50px;
+    height: 20vh;
 }
 
 .hero-section h1 {
@@ -94,6 +96,7 @@ header.shrink img {
 }
 
 .content-section {
+    margin-top: 10vh;
     padding: 60px 20px;
     text-align: center;
     flex: 1;
