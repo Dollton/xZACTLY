@@ -211,29 +211,38 @@ header.shrink img {
 }
 
 .features-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 0px 20px;
-    background-color: #f8f8f8;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Two equal columns */
+    gap: 20px;
+    /* Adjust gap between items */
+    padding: 20px;
+    background: linear-gradient(to bottom, black, lightgray);
 }
 
-#features-top.features-section {
-    padding-top: 40px;
+.features-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Two equal columns */
+    gap: 20px;
+    /* Adjust gap between items */
+    padding: 20px;
+    background: linear-gradient(to bottom, black, lightgray);
 }
 
-#features-bottom.features-section {
-    padding-bottom: 40px;
-}
 
 .feature-box {
-    flex: 1 1 30%;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin: 10px;
     text-align: center;
+}
+
+.feature-box:nth-child(3n + 3) {
+    grid-column: span 2;
+    /* Make every third feature box span 2 columns */
 }
 
 .feature-box h3 {
@@ -247,8 +256,8 @@ header.shrink img {
 }
 
 footer {
-    background-color: #333;
-    color: white;
+    background-color: lightgray;
+    color: black;
     padding: 40px 20px;
     text-align: center;
     width: 100%;
