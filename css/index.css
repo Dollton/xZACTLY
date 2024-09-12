@@ -87,6 +87,10 @@ header.shrink img {
     overflow: hidden;
 }
 
+.hero-section text{
+    background-color: black;
+}
+
 .hero-section video {
     position: absolute;
     top: 0;
