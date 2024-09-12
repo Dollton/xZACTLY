@@ -72,12 +72,14 @@ header.shrink img {
 .hero-section h1 {
     font-size: 3rem;
     margin-bottom: 20px;
+    color: yellow
 }
 
 .hero-section p {
     font-size: 1.2rem;
     max-width: 700px;
     margin-bottom: 40px;
+    color: darkblue;
 }
 
 .hero-section .cta-button {
