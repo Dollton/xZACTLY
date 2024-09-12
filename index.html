@@ -4,13 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>xZACTLY.AI</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
     <header id="header">
       <a href="#top">
         <img src="images/logo1.png" alt="xZACTLY.AI Logo" />
       </a>
+      <div class="header-right">
+        <a href="portfolio.html">Portfolio</a>
+      </div>
     </header>
 
     <!-- Hero Section -->
@@ -120,7 +123,7 @@
         const learnMoreButton = document.getElementById("learn-more-button");
         learnMoreButton.addEventListener("click", function (event) {
           event.preventDefault();
-          slowScrollTo(document.getElementById("features-top"), 1500); 
+          slowScrollTo(document.getElementById("features-top"), 1500);
         });
       };
 

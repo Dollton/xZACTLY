@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: white;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    /* Vertically center the content */
+    justify-content: flex-start;
+    padding-left: 20px;
+    height: 50px;
+    position: relative;
+}
+
+header img {
+    width: 150px;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.company {
+    display: none;
+    padding: 20px;
+}
+
+.company.active {
+    display: block;
+}
+
+.company img {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+}
+
+.company-description {
+    margin-top: 10px;
+}
+
+.arrows {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #333;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+    user-select: none;
+    z-index: 1;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+.arrows:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+/* Shadows for previous and next photos */
+.shadow-image {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 150px;
+    height: 100px;
+    opacity: 0.5;
+    filter: blur(2px);
+}
+
+.prev-shadow {
+    left: 70px;
+}
+
+.next-shadow {
+    right: 70px;
+}

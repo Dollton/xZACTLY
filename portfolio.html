@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Carousel</title>
+    <link rel="stylesheet" href="css/portfolio.css" />
+  </head>
+  <body>
+    <header id="header">
+      <a href="index.html">
+        <img src="images/logo1.png" alt="xZACTLY.AI Logo" />
+      </a>
+    </header>
+    <h1>Company Showcase</h1>
+    <div class="carousel-container">
+      <!-- Company 1 -->
+      <div class="company active" id="company-1">
+        <img src="images/arbx_logo.png" alt="Company 1" />
+        <div class="company-description">
+          <h2>ArbX</h2>
+          <p>
+            A sophisticated sports betting application that utilizes AI and
+            machine learning to deliver real-time predictions and insights,
+            enhancing decision-making and maximizing betting outcomes. The
+            platform features a user-friendly interface and comprehensive
+            analytics tools for both novice and experienced bettors.
+          </p>
+        </div>
+      </div>
+
+      <!-- Company 2 -->
+      <div class="company" id="company-2">
+        <img src="images/callsine_logo.jpeg" alt="Company 2" />
+        <div class="company-description">
+          <h2>CALLSINE</h2>
+          <p>
+            An AI-driven application designed to optimize and automate call
+            center operations, enhance customer interactions through real-time
+            sentiment analysis and personalized responses. The platform boosts
+            agent performance and customer satisfaction by providing actionable
+            insights and dynamic call scripts.
+          </p>
+        </div>
+      </div>
+
+      <!-- Company 3 -->
+      <div class="company" id="company-3">
+        <img src="images/cymatrax_logo.jpeg" alt="Company 3" />
+        <div class="company-description">
+          <h2>Cymatrax</h2>
+          <p>
+            An innovative audio enhancement application that uses AI to optimize
+            sound frequencies for improved mental focus, relaxation, and
+            productivity. The platform creates healthier listening environments
+            by filtering out harmful frequencies, tailoring audio experiences to
+            individual needs.
+          </p>
+        </div>
+      </div>
+
+      <!-- Add more companies as needed -->
+
+      <!-- Company 4 -->
+      <div class="company" id="company-4">
+        <img src="images/arbx_logo.png" alt="Company 4" />
+        <div class="company-description">
+          <h2>The Mirror</h2>
+          <p>
+            An open-source alternative to Roblox and UEFN, providing a
+            real-time, collaborative game development platform built on Godot
+            and NestJS. It empowers creators with full ownership of their
+            projects, enabling easy, no-code development with integrated
+            multiplayer and marketplace features.
+          </p>
+        </div>
+      </div>
+
+      <!-- Company 5 -->
+      <div class="company" id="company-5">
+        <img src="images/cymatrax_logo.jpeg" alt="Company 5" />
+        <div class="company-description">
+          <h2>Globebarium</h2>
+          <p>
+            Globebarium is a next generation, highly interactive Globe form
+            function with a broad range of content, video, interactive, gaming
+            and other unique use cases.
+          </p>
+        </div>
+      </div>
+
+      <!-- Company 6 -->
+      <div class="company" id="company-6">
+        <img src="images/callsine_logo.jpeg" alt="Company 6" />
+        <div class="company-description">
+          <h2>Company 6</h2>
+          <p>
+            Specializing in AI automation, Company 6 is driving the future of
+            robotics and machine learning across industries.
+          </p>
+        </div>
+      </div>
+
+      <!-- Arrows for navigation -->
+      <span class="arrows left-arrow" onclick="previousCompany()"
+        >&#10094;</span
+      >
+      <span class="arrows right-arrow" onclick="nextCompany()">&#10095;</span>
+
+      <!-- Shadow images for preview -->
+      <img id="prev-shadow" class="shadow-image prev-shadow" />
+      <img id="next-shadow" class="shadow-image next-shadow" />
+    </div>
+
+    <script>
+      let currentCompanyIndex = 1;
+      const totalCompanies = 6;
+
+      // Show initial shadow images
+      updateShadows(currentCompanyIndex);
+
+      function showCompany(index) {
+        const companies = document.querySelectorAll(".company");
+        companies.forEach((company, i) => {
+          company.classList.remove("active");
+          if (i + 1 === index) {
+            company.classList.add("active");
+          }
+        });
+
+        // Update shadow images
+        updateShadows(index);
+      }
+
+      function nextCompany() {
+        currentCompanyIndex++;
+        if (currentCompanyIndex > totalCompanies) {
+          currentCompanyIndex = 1;
+        }
+        showCompany(currentCompanyIndex);
+      }
+
+      function previousCompany() {
+        currentCompanyIndex--;
+        if (currentCompanyIndex < 1) {
+          currentCompanyIndex = totalCompanies;
+        }
+        showCompany(currentCompanyIndex);
+      }
+
+      function updateShadows(index) {
+        const companies = document.querySelectorAll(".company");
+        const prevIndex = index === 1 ? totalCompanies : index - 1;
+        const nextIndex = index === totalCompanies ? 1 : index + 1;
+
+        // Get the src of the previous and next company's images
+        const prevImageSrc = companies[prevIndex - 1].querySelector("img").src;
+        const nextImageSrc = companies[nextIndex - 1].querySelector("img").src;
+
+        // Update the shadow images
+        document.getElementById("prev-shadow").src = prevImageSrc;
+        document.getElementById("next-shadow").src = nextImageSrc;
+      }
+    </script>
+  </body>
+</html>
