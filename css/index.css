@@ -144,7 +144,7 @@ ul {
     /* Moves the bullets inside the list item box */
     text-align: center;
     /* Centers the text */
-    padding: 0;
+    padding-top: 10px;
     /* Removes default padding */
     margin: 0 auto;
     /* Centers the list */

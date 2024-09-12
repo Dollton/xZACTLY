@@ -15,9 +15,7 @@ body {
     top: 0;
     left: 0;
     z-index: 0;
-    /* Ensure particles are behind other elements */
     pointer-events: auto;
-    /* Allow mouse events to pass through */
 }
 
 header {
@@ -28,9 +26,7 @@ header {
     height: 50px;
     position: relative;
     z-index: 2;
-    /* Set z-index higher than particles */
     pointer-events: none;
-    /* Prevent header itself from blocking particles */
 }
 
 header img {
@@ -50,16 +46,13 @@ header img {
     margin: auto;
     overflow: hidden;
     z-index: 2;
-    /* Set z-index higher than particles */
     pointer-events: none;
-    /* Prevent carousel container from blocking particles */
 }
 
 .company {
     display: none;
     padding: 20px;
     pointer-events: auto;
-    /* Re-enable events for the active company block */
 }
 
 .company.active {
@@ -75,7 +68,6 @@ header img {
 .company-description {
     margin-top: 10px;
     pointer-events: auto;
-    /* Ensure description can be interacted with */
 }
 
 .arrows {
@@ -90,9 +82,7 @@ header img {
     background-color: rgba(0, 0, 0, 0.2);
     user-select: none;
     z-index: 3;
-    /* Ensure arrows are on top */
     pointer-events: auto;
-    /* Allow interactions with arrows */
 }
 
 .left-arrow {
@@ -108,7 +98,6 @@ header img {
     color: white;
 }
 
-/* Shadows for previous and next photos */
 .shadow-image {
     position: absolute;
     top: 50%;
@@ -118,7 +107,6 @@ header img {
     opacity: 0.5;
     filter: blur(2px);
     pointer-events: none;
-    /* Shadows do not need interactions */
 }
 
 .prev-shadow {
