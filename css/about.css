@@ -16,7 +16,7 @@ body {
     left: 0;
     z-index: 0;
     /* Ensure particles are behind other elements */
-    pointer-events: none;
+    pointer-events: auto;
     /* Allow mouse events to pass through */
 }
 
