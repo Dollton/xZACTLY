@@ -25,7 +25,7 @@
         ACCELERATING GLOBAL GROWTH FOR:<br />
         START-UP & HIGH GROWTH COMPANIES
       </p>
-      <a href="#features-top" class="cta-button" id="learn-more-button"
+      <a href="#features" class="cta-button" id="learn-more-button"
         >Learn More</a
       >
 
@@ -48,7 +48,7 @@
     </section>
 
     <!-- Features Section -->
-    <section class="features-section">
+    <section class="features-section" id="features">
       <div class="feature-box">
         <h3>Sales & Revenue Acceleration</h3>
         <p>
@@ -100,99 +100,10 @@
       <p>&copy; 2024 xZACTLY.AI. All rights reserved.</p>
     </footer>
 
-    <!-- Particles.js Script -->
+    <!-- Script -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/particles.js"></script> <!-- Link to external particles script -->
     <script>
-      particlesJS("particles-js", {
-        "particles": {
-          "number": {
-            "value": 80,
-            "density": {
-              "enable": true,
-              "value_area": 800
-            }
-          },
-          "color": {
-            "value": "#ffffff"
-          },
-          "shape": {
-            "type": "circle",
-            "stroke": {
-              "width": 0,
-              "color": "#000000"
-            },
-            "polygon": {
-              "nb_sides": 5
-            }
-          },
-          "opacity": {
-            "value": 0.5,
-            "random": false,
-            "anim": {
-              "enable": false,
-              "speed": 1,
-              "opacity_min": 0.1,
-              "sync": false
-            }
-          },
-          "size": {
-            "value": 5,
-            "random": true,
-            "anim": {
-              "enable": false,
-              "speed": 40,
-              "size_min": 0.1,
-              "sync": false
-            }
-          },
-          "line_linked": {
-            "enable": true,
-            "distance": 150,
-            "color": "#ffffff",
-            "opacity": 0.4,
-            "width": 1
-          },
-          "move": {
-            "enable": true,
-            "speed": 6,
-            "direction": "none",
-            "random": false,
-            "straight": false,
-            "out_mode": "out",
-            "bounce": false,
-            "attract": {
-              "enable": false,
-              "rotateX": 600,
-              "rotateY": 1200
-            }
-          }
-        },
-        "interactivity": {
-          "detect_on": "canvas",
-          "events": {
-            "onhover": {
-              "enable": true,
-              "mode": "repulse" // <!-- Enable repulse on hover -->
-            },
-            "onclick": {
-              "enable": true,
-              "mode": "push"  //<!-- Enable repulse on click -->
-            },
-            "resize": true
-          },
-          "modes": {
-            "repulse": {
-              "distance": 150, // <!-- Repulsion distance -->
-              "duration": 2.0  // <!-- Repulsion effect duration -->
-            },
-            "push": {
-              "particles_nb": 4  //<!-- Number of particles created at the cursor -->
-            }
-          }
-        },
-        "retina_detect": true
-      });
-
       let isShrunk = false;
 
       function shrinkHeader() {
@@ -213,7 +124,7 @@
         if (learnMoreButton) {
           learnMoreButton.addEventListener("click", function (event) {
             event.preventDefault();
-            slowScrollTo(document.getElementById("features-top"), 1500);
+            slowScrollTo(document.getElementById("features"), 1500);
           });
         }
       };

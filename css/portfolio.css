@@ -7,14 +7,30 @@ body {
     color: white;
 }
 
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    /* Ensure particles are behind other elements */
+    pointer-events: none;
+    /* Allow mouse events to pass through */
+}
+
 header {
     display: flex;
     align-items: center;
-    /* Vertically center the content */
     justify-content: flex-start;
     padding-left: 20px;
     height: 50px;
     position: relative;
+    z-index: 2;
+    /* Set z-index higher than particles */
+    pointer-events: none;
+    /* Prevent header itself from blocking particles */
 }
 
 header img {
@@ -24,6 +40,8 @@ header img {
     margin: 0;
     position: absolute;
     top: 0;
+    pointer-events: auto;
+    /* Allow clicks on the logo */
 }
 
 .carousel-container {
@@ -31,11 +49,17 @@ header img {
     max-width: 800px;
     margin: auto;
     overflow: hidden;
+    z-index: 2;
+    /* Set z-index higher than particles */
+    pointer-events: none;
+    /* Prevent carousel container from blocking particles */
 }
 
 .company {
     display: none;
     padding: 20px;
+    pointer-events: auto;
+    /* Re-enable events for the active company block */
 }
 
 .company.active {
@@ -50,6 +74,8 @@ header img {
 
 .company-description {
     margin-top: 10px;
+    pointer-events: auto;
+    /* Ensure description can be interacted with */
 }
 
 .arrows {
@@ -63,7 +89,10 @@ header img {
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.2);
     user-select: none;
-    z-index: 1;
+    z-index: 3;
+    /* Ensure arrows are on top */
+    pointer-events: auto;
+    /* Allow interactions with arrows */
 }
 
 .left-arrow {
@@ -85,9 +114,11 @@ header img {
     top: 50%;
     transform: translateY(-50%);
     width: 150px;
-    height: 100px;
+    height: 150px;
     opacity: 0.5;
     filter: blur(2px);
+    pointer-events: none;
+    /* Shadows do not need interactions */
 }
 
 .prev-shadow {
