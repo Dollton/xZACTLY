@@ -15,7 +15,10 @@
 
     <!-- Hero Section -->
     <section class="hero-section" id="top">
-      <br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <video autoplay muted loop id="hero-video">
+        <source src="images/test_video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
       <h1>Revolutionizing AI for the Future</h1>
       <p>
@@ -24,6 +27,8 @@
         intelligence.
       </p>
       <a href="#learn-more" class="cta-button">Learn More</a>
+
+      <br /><br /><br /><br /><br /><br /><br />
     </section>
 
     <!-- Content Section -->
@@ -68,9 +73,7 @@
     </footer>
 
     <script>
-      let lastMouseY = 0;
       let isShrunk = false;
-      const threshold = 200; // Minimum distance in pixels before shrinking
 
       function shrinkHeader() {
         const header = document.getElementById("header");
@@ -83,11 +86,12 @@
         }
       }
 
-      
-
       window.onload = function () {
         shrinkHeader();
+        const video = document.getElementById("hero-video");
+        video.playbackRate = 0.5;
       };
+
       window.onbeforeunload = function () {
         window.scrollTo(0, 0);
       };
