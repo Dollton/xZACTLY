@@ -15,11 +15,10 @@
         <a href="about.html">About Us</a>
       </div>
     </header>
+    <div id="particles-js"></div>
 
     <!-- Hero Section -->
     <section class="hero-section" id="top">
-      <div id="particles-js"></div>
-      
       <h1>AI is the Engine ... but Data is the Fuel</h1>
       <p>
         ACCELERATING GLOBAL GROWTH FOR:<br />
@@ -138,20 +137,20 @@
       <img id="next-shadow" class="shadow-image next-shadow" />
     </div>
 
-
     <!-- Content Section -->
     <section class="content-section" id="learn-more">
       <h2>What We Do</h2>
       <p>
-        xZactly.ai works with Artificial Intelligence start-up businesses, high growth companies, and corporations from around the world to deliver: 
-        <ul>
-          <li>Accelerated Revenue Growth</li>
-          <li>AI Specific Sales, Biz Dev & Marketing Expertise</li>
-          <li>Seed & Venture Capital Financing Access</li>
-          <li>AI/ML Project Implementation</li>
-        </ul>
+        xZactly.ai works with Artificial Intelligence start-up businesses, high
+        growth companies, and corporations from around the world to deliver:
       </p>
-      <br>
+      <ul>
+        <li>Accelerated Revenue Growth</li>
+        <li>AI Specific Sales, Biz Dev & Marketing Expertise</li>
+        <li>Seed & Venture Capital Financing Access</li>
+        <li>AI/ML Project Implementation</li>
+      </ul>
+      <br />
     </section>
 
     <!-- Features Section -->
@@ -209,7 +208,8 @@
 
     <!-- Script -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="js/particles.js"></script> <!-- Link to external particles script -->
+    <script src="js/particles.js"></script>
+    <!-- Link to external particles script -->
     <script src="js/carousel.js"></script>
     <script>
       let isShrunk = false;
@@ -239,7 +239,9 @@
 
       function slowScrollTo(target, duration) {
         const startPosition = window.pageYOffset;
-        const targetPosition = target ? target.getBoundingClientRect().top + window.pageYOffset : 0;
+        const targetPosition = target
+          ? target.getBoundingClientRect().top + window.pageYOffset
+          : 0;
         const distance = targetPosition - startPosition;
         let startTime = null;
 
