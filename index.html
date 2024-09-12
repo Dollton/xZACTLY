@@ -28,9 +28,116 @@
       <a href="#features" class="cta-button" id="learn-more-button"
         >Learn More</a
       >
-
-      <br /><br /><br /><br /><br /><br /><br />
     </section>
+
+    <!-- Company Showcase -->
+    <div class="carousel-container">
+      <!-- Company 1 -->
+      <div class="company active" id="company-1">
+        <a href="https://www.arbx.bet" target="_blank">
+          <img src="images/arbx_logo.png" alt="Company 1" />
+        </a>
+        <div class="company-description">
+          <h2>ArbX</h2>
+          <p>
+            A sophisticated sports betting application that utilizes AI and
+            machine learning to deliver real-time predictions and insights,
+            enhancing decision-making and maximizing betting outcomes. The
+            platform features a user-friendly interface and comprehensive
+            analytics tools for both novice and experienced bettors.
+          </p>
+        </div>
+      </div>
+
+      <!-- Company 2 -->
+      <div class="company" id="company-2">
+        <a href="https://callsine.com" target="_blank">
+          <img src="images/callsine_logo.jpeg" alt="Company 2" />
+        </a>
+        <div class="company-description">
+          <h2>CALLSINE</h2>
+          <p>
+            An AI-driven application designed to optimize and automate call
+            center operations, enhance customer interactions through real-time
+            sentiment analysis and personalized responses. The platform boosts
+            agent performance and customer satisfaction by providing actionable
+            insights and dynamic call scripts.
+          </p>
+        </div>
+      </div>
+
+      <!-- Company 3 -->
+      <div class="company" id="company-3">
+        <a href="https://cymatrax.com" target="_blank">
+          <img src="images/cymatrax_logo.jpeg" alt="Company 3" />
+        </a>
+        <div class="company-description">
+          <h2>Cymatrax</h2>
+          <p>
+            An innovative audio enhancement application that uses AI to optimize
+            sound frequencies for improved mental focus, relaxation, and
+            productivity. The platform creates healthier listening environments
+            by filtering out harmful frequencies, tailoring audio experiences to
+            individual needs.
+          </p>
+        </div>
+      </div>
+
+      <!-- Add more companies as needed -->
+
+      <!-- Company 4 -->
+      <div class="company" id="company-4">
+        <a href="https://themirror.space" target="_blank">
+          <img src="images/themirror_logo.jpeg" alt="Company 4" />
+        </a>
+        <div class="company-description">
+          <h2>The Mirror</h2>
+          <p>
+            An open-source alternative to Roblox and UEFN, providing a
+            real-time, collaborative game development platform built on Godot
+            and NestJS. It empowers creators with full ownership of their
+            projects, enabling easy, no-code development with integrated
+            multiplayer and marketplace features.
+          </p>
+        </div>
+      </div>
+
+      <!-- Company 5 -->
+      <div class="company" id="company-5">
+        <img src="images/cymatrax_logo.jpeg" alt="Company 5" />
+        <div class="company-description">
+          <h2>Globebarium</h2>
+          <p>
+            Globebarium is a next generation, highly interactive Globe form
+            function with a broad range of content, video, interactive, gaming
+            and other unique use cases.
+          </p>
+        </div>
+      </div>
+
+      <!-- Company 6 -->
+      <div class="company" id="company-6">
+        <img src="images/callsine_logo.jpeg" alt="Company 6" />
+        <div class="company-description">
+          <h2>Company 6</h2>
+          <p>
+            Specializing in AI automation, Company 6 is driving the future of
+            robotics and machine learning across industries.
+          </p>
+        </div>
+      </div>
+
+      <!-- Arrows for navigation -->
+      <span class="arrows left-arrow" onclick="previousCompany()"
+        >&#10094;</span
+      >
+      <span class="arrows right-arrow" onclick="nextCompany()">&#10095;</span>
+
+      <!-- Shadow images for preview -->
+      <img id="prev-shadow" class="shadow-image prev-shadow" />
+      <img id="next-shadow" class="shadow-image next-shadow" />
+    </div>
+
 
     <!-- Content Section -->
     <section class="content-section" id="learn-more">
@@ -103,6 +210,7 @@
     <!-- Script -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="js/particles.js"></script> <!-- Link to external particles script -->
+    <script src="js/carousel.js"></script>
     <script>
       let isShrunk = false;
 
