@@ -98,7 +98,7 @@ header.shrink img {
         1px -1px 0px white,
         /* Top right */
         -1px -1px 0px white;
-        /* Top left */
+    /* Top left */
 }
 
 .hero-section .cta-button {
@@ -156,8 +156,16 @@ header.shrink img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 60px 20px;
+    padding: 0px 20px;
     background-color: #f8f8f8;
+}
+
+#features-top.features-section {
+    padding-top: 40px;
+}
+
+#features-bottom.features-section {
+    padding-bottom: 40px;
 }
 
 .feature-box {

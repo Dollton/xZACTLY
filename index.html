@@ -26,7 +26,9 @@
         that empower businesses to achieve more with the power of artificial
         intelligence.
       </p>
-      <a href="#learn-more" class="cta-button">Learn More</a>
+      <a href="#features-top" class="cta-button" id="learn-more-button"
+        >Learn More</a
+      >
 
       <br /><br /><br /><br /><br /><br /><br />
     </section>
@@ -42,9 +44,9 @@
     </section>
 
     <!-- Features Section -->
-    <section class="features-section">
+    <section class="features-section" id="features-top">
       <div class="feature-box">
-        <h3>AI Solutions</h3>
+        <h3>Sales & Revenue Acceleration</h3>
         <p>
           We offer a wide range of AI solutions tailored to different
           industries, ensuring your business stays ahead in a competitive
@@ -52,14 +54,38 @@
         </p>
       </div>
       <div class="feature-box">
-        <h3>Innovative Technology</h3>
+        <h3>Go-To-Market Strategy</h3>
         <p>
           Our technology is at the forefront of innovation, allowing businesses
           to adapt quickly and efficiently to ever-changing markets.
         </p>
       </div>
       <div class="feature-box">
-        <h3>Expert Team</h3>
+        <h3>Launching Operations in U.S.A.</h3>
+        <p>
+          Our team consists of top-tier AI experts with extensive knowledge and
+          experience in developing high-impact AI products.
+        </p>
+      </div>
+    </section>
+    <section class="features-section" id="features-bottom">
+      <div class="feature-box">
+        <h3>Start-Up Business Financing</h3>
+        <p>
+          We offer a wide range of AI solutions tailored to different
+          industries, ensuring your business stays ahead in a competitive
+          landscape.
+        </p>
+      </div>
+      <div class="feature-box">
+        <h3>Building Teams & Products</h3>
+        <p>
+          Our technology is at the forefront of innovation, allowing businesses
+          to adapt quickly and efficiently to ever-changing markets.
+        </p>
+      </div>
+      <div class="feature-box">
+        <h3>AI/ML Project Implementation</h3>
         <p>
           Our team consists of top-tier AI experts with extensive knowledge and
           experience in developing high-impact AI products.
@@ -89,8 +115,39 @@
       window.onload = function () {
         shrinkHeader();
         const video = document.getElementById("hero-video");
-        video.playbackRate = .8;
+        video.playbackRate = 0.8;
+
+        const learnMoreButton = document.getElementById("learn-more-button");
+        learnMoreButton.addEventListener("click", function (event) {
+          event.preventDefault();
+          slowScrollTo(document.getElementById("features-top"), 1500); 
+        });
       };
+
+      function slowScrollTo(target, duration) {
+        const startPosition = window.pageYOffset;
+        const targetPosition =
+          target.getBoundingClientRect().top + window.pageYOffset;
+        const distance = targetPosition - startPosition;
+        let startTime = null;
+
+        function animation(currentTime) {
+          if (startTime === null) startTime = currentTime;
+          const timeElapsed = currentTime - startTime;
+          const run = ease(timeElapsed, startPosition, distance, duration);
+          window.scrollTo(0, run);
+          if (timeElapsed < duration) requestAnimationFrame(animation);
+        }
+
+        function ease(t, b, c, d) {
+          t /= d / 2;
+          if (t < 1) return (c / 2) * t * t + b;
+          t--;
+          return (-c / 2) * (t * (t - 2) - 1) + b;
+        }
+
+        requestAnimationFrame(animation);
+      }
 
       window.onbeforeunload = function () {
         window.scrollTo(0, 0);
