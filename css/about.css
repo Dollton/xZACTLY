@@ -56,9 +56,15 @@ header img {
     /* Ensure container doesn't shrink */
 }
 
-.carousel-container h1 {
+.carousel-container h2 {
     text-align: center;
     color: gold;
+    font-size: 2.5rem;
+}
+
+.carousel-container p {
+    color: white;
+    font-size: 1.2rem;
 }
 
 /* Ensure all elements inside the carousel can receive pointer events */
@@ -83,7 +89,7 @@ header img {
 
 .company img {
     margin-bottom: 20px;
-    height: 200px;
+    height: 300px;
     width: auto;
     object-fit: contain;
 }
@@ -93,7 +99,7 @@ header img {
     position: absolute;
     top: 200px;
     font-size: 30px;
-    color: #333;
+    color: #acacac;
     padding: 10px;
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.2);
