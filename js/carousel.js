@@ -1,5 +1,5 @@
 let currentCompanyIndex = 1;
-const totalCompanies = 6;
+const totalCompanies = 5;
 
 // Show initial shadow images
 updateShadows(currentCompanyIndex);
