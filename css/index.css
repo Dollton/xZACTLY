@@ -18,7 +18,7 @@ header {
     align-items: center;
     justify-content: center;
     transition: all 5s ease;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(0, 0, 0, 0.6);
     z-index: 1000;
     top: 0;
     left: 0;
@@ -49,9 +49,10 @@ header {
 }
 
 header.shrink {
-    height: 50px;
+    height: 75px;
     justify-content: flex-start;
-    padding-left: 20px;
+    /* padding-left: 20px; */
+    background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
 }
 
 header a {
@@ -246,7 +247,7 @@ li {
 footer {
     background-color: lightgray;
     color: black;
-    padding: 40px 20px;
+    padding: 40px 0px;
     text-align: center;
     width: 100%;
     position: relative;
