@@ -67,7 +67,7 @@ header img {
 }
 
 header.shrink img {
-    width: 150px;
+    width: 200px;
     height: auto;
     padding-top: 0;
 }
@@ -101,7 +101,7 @@ header.shrink img {
 }
 
 .hero-section.shrink {
-    height: 45vh;
+    height: 35vh;
     /* margin-top: 50px; */
 }
 
@@ -119,18 +119,19 @@ header.shrink img {
 }
 
 .hero-section .cta-button {
-    background-color: #007bff;
+    background-color: #06305e;
     color: white;
     border: none;
     padding: 15px 30px;
     font-size: 1.2rem;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.7s ease;
+    text-decoration: none;
 }
 
 .hero-section .cta-button:hover {
-    background-color: #0056b3;
+    background-color: #3c99fc;
 }
 
 .hero-section h1,
@@ -260,39 +261,42 @@ footer p {
 }
 
 
-/* Testing */
+/* Carousel styles */
 
 .carousel-container {
     position: relative;
     max-width: 800px;
     margin: auto;
-    overflow: hidden;
-    /* Prevent carousel container from blocking particles */
+    overflow: visible;
+    /* Allow content to expand */
     color: white;
     z-index: 1;
-    /* Ensure carousel is above the particles */
     pointer-events: auto;
-    /* Allow pointer events for carousel */
     flex: 1;
+    min-height: 500px;
+    /* Ensure container doesn't shrink */
 }
 
+.carousel-container h1 {
+    text-align: center;
+    color: gold;
+}
+
+/* Ensure all elements inside the carousel can receive pointer events */
 .carousel-container * {
     pointer-events: auto;
-    /* Re-enable pointer events for all child elements */
 }
 
 .company {
     display: none;
     padding: 20px;
     pointer-events: auto;
-    /* Re-enable events for the active company block */
 }
 
 .company.active {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     text-align: center;
     pointer-events: auto;
     z-index: 1;
@@ -300,19 +304,15 @@ footer p {
 
 .company img {
     margin-bottom: 20px;
-}
-
-.company-description {
-    margin-top: 10px;
-    pointer-events: auto;
-    text-align: center;
+    height: 200px;
+    width: auto;
+    object-fit: contain;
 }
 
 .arrows {
     cursor: pointer;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 200px;
     font-size: 30px;
     color: #333;
     padding: 10px;
@@ -320,9 +320,7 @@ footer p {
     background-color: rgba(0, 0, 0, 0.2);
     user-select: none;
     z-index: 3;
-    /* Ensure arrows are on top */
     pointer-events: auto;
-    /* Allow interactions with arrows */
 }
 
 .left-arrow {
@@ -338,17 +336,24 @@ footer p {
     color: white;
 }
 
+/* Ensure the description text flows naturally below the image */
+.company-description {
+    margin-top: 10px;
+    pointer-events: auto;
+    text-align: center;
+    color: white;
+}
+
 /* Shadows for previous and next photos */
 .shadow-image {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 150px;
+    /* Align with arrows and image */
     width: 150px;
     height: 150px;
     opacity: 0.5;
     filter: blur(2px);
     pointer-events: none;
-    /* Shadows do not need interactions */
 }
 
 .prev-shadow {
@@ -359,15 +364,9 @@ footer p {
     right: 70px;
 }
 
-.carousel-container a {
-    pointer-events: auto;
-    /* Re-enable pointer events for clickable items */
-}
-
-
+/* Allow interactive elements to receive pointer events */
+.carousel-container a,
 div,
-.carousel-container .arrows,
-.carousel-container a {
+.carousel-container .arrows {
     pointer-events: auto;
-    /* Re-enable pointer events for interactive elements */
 }
