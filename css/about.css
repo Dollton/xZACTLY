@@ -149,3 +149,10 @@ div,
 .carousel-container .arrows {
     pointer-events: auto;
 }
+
+/* Hide shadows when screen width is under 700 pixels */
+@media screen and (max-width: 700px) {
+    .shadow-image {
+        display: none;
+    }
+}

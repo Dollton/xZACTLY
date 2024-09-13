@@ -108,7 +108,7 @@ header.shrink img {
 .hero-section h1 {
     font-size: 3rem;
     margin-bottom: 20px;
-    color: gold
+    color: gold;
 }
 
 .hero-section p {
@@ -169,7 +169,6 @@ li {
     /* Make sure it's positioned relative so z-index works */
     z-index: 1;
     /* Higher than particles-js */
-
 }
 
 .content-section,
@@ -220,7 +219,6 @@ li {
     background: linear-gradient(to bottom, black, lightgray);
 }
 
-
 .feature-box {
     background-color: rgb(244, 244, 244);
     border-radius: 8px;
@@ -259,7 +257,6 @@ footer p {
     font-size: 1rem;
     margin: 0;
 }
-
 
 /* Carousel styles */
 
@@ -369,4 +366,33 @@ footer p {
 div,
 .carousel-container .arrows {
     pointer-events: auto;
+}
+
+/* Hide shadows when screen width is under 700 pixels */
+@media screen and (max-width: 700px) {
+    .shadow-image {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .features-section {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .feature-box {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .hero-section {
+        display: none;
+    }
+
+    .carousel-container {
+        display: none;
+    }
 }
